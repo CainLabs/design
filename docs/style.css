@@ -1,16 +1,23 @@
-/* CainCyberLabs - Compliance Compass V2.3 Stylesheet */
+/* CainCyberLabs - Compliance Compass V2.3 Stylesheet (Pink/Magenta Theme) */
 
 /* ============== VARIABLES & GLOBAL STYLES ============== */
 :root {
-    --primary-accent: #64ffda;
-    --background-dark: #0a192f;
-    --background-light: #112240;
-    --background-panel-translucent: rgba(17, 34, 64, 0.75);
-    --shadow-color: rgba(2, 12, 27, 0.7);
-    --text-light: #ccd6f6;
-    --text-medium: #8892b0;
-    --heading-color: #e6f1ff;
-    --panel-border: rgba(100, 255, 218, 0.1);
+    /* Primary Accent: Shifted from Neon Cyan to Neon Pink */
+    --primary-accent: #ff64d2;
+    
+    /* Backgrounds: Shifted from Dark Navy to Deep Plum/Dark Magenta */
+    --background-dark: #1f0a16;
+    --background-light: #2d1222;
+    --background-panel-translucent: rgba(45, 18, 34, 0.75);
+    
+    /* Shadows & Text: Warmer tones to match the pink hue */
+    --shadow-color: rgba(27, 2, 12, 0.7);
+    --text-light: #f6ccd9;
+    --text-medium: #b08899;
+    --heading-color: #ffe6f0;
+    
+    /* Borders */
+    --panel-border: rgba(255, 100, 210, 0.1);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -28,7 +35,7 @@ body {
 
 /* ============== TYPOGRAPHY ============== */
 h1, h2, h3 { font-weight: 700; line-height: 1.2; color: var(--heading-color); margin-top: 0; }
-h1 { font-size: 2.8rem; margin-bottom: 0.5rem; text-shadow: 0 0 15px rgba(100, 255, 218, 0.1); }
+h1 { font-size: 2.8rem; margin-bottom: 0.5rem; text-shadow: 0 0 15px rgba(255, 100, 210, 0.1); }
 h2 { font-size: 2.2rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--panel-border); padding-bottom: 0.5rem; }
 h3 { font-size: 1.6rem; margin-bottom: 1rem; color: var(--text-light); }
 p { margin-top: 0; margin-bottom: 1rem; color: var(--text-medium); }
@@ -39,7 +46,7 @@ strong { color: var(--text-light); }
 
 /* ============== LAYOUT & SECTIONS ============== */
 .navbar {
-    background-color: rgba(10, 25, 47, 0.95);
+    background-color: rgba(31, 10, 22, 0.95);
     padding: 1rem 0;
     border-bottom: 1px solid var(--panel-border);
     position: sticky;
@@ -57,7 +64,8 @@ strong { color: var(--text-light); }
     overflow: hidden;
     text-align: center;
     padding: 6rem 0;
-    background: radial-gradient(circle at 50% 50%, #112240 0%, #0a192f 100%);
+    /* Updated radial gradient to match new background vars */
+    background: radial-gradient(circle at 50% 50%, #2d1222 0%, #1f0a16 100%);
 }
 
 .hero::before {
@@ -68,8 +76,8 @@ strong { color: var(--text-light); }
     top: -50%;
     left: -50%;
     background-image: 
-        linear-gradient(rgba(100, 255, 218, 0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(100, 255, 218, 0.05) 1px, transparent 1px);
+        linear-gradient(rgba(255, 100, 210, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 100, 210, 0.05) 1px, transparent 1px);
     background-size: 50px 50px;
     transform: perspective(500px) rotateX(60deg);
     animation: gridMove 20s linear infinite;
@@ -125,15 +133,16 @@ footer { text-align: center; padding: 2rem 0; margin-top: 2rem; font-size: 0.9em
     border: 1px solid var(--primary-accent);
 }
 .cta-button.outline:hover {
-    background-color: rgba(100, 255, 218, 0.1);
+    background-color: rgba(255, 100, 210, 0.1);
     color: #fff;
     transform: translateY(-2px);
 }
 
 /* ============== TERMINAL WINDOW ============== */
+/* Adjusted hardcoded hex values to match pink/purple theme */
 .terminal-window {
-    background-color: #020c1b;
-    border: 1px solid #233554;
+    background-color: #1b020e; /* Deep purple-black */
+    border: 1px solid #54233b; /* Muted magenta border */
     border-radius: 8px;
     box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.7);
     width: 100%;
@@ -148,11 +157,11 @@ footer { text-align: center; padding: 2rem 0; margin-top: 2rem; font-size: 0.9em
 }
 
 .terminal-header {
-    background-color: #112240;
+    background-color: #2d1222; /* Matches bg-light */
     padding: 10px 15px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #233554;
+    border-bottom: 1px solid #54233b;
 }
 
 .terminal-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; margin-right: 8px; }
@@ -160,10 +169,10 @@ footer { text-align: center; padding: 2rem 0; margin-top: 2rem; font-size: 0.9em
 .yellow { background-color: #ffbd2e; }
 .green { background-color: #27c93f; }
 
-.terminal-body { padding: 20px; color: #a8b2d1; line-height: 1.6; }
+.terminal-body { padding: 20px; color: #d1a8c0; line-height: 1.6; }
 .cmd { color: #fff; }
-.highlight { color: #64ffda; }
-.success { color: #64ffda; font-weight: bold; }
+.highlight { color: #ff64d2; } /* Matches primary accent */
+.success { color: #ff64d2; font-weight: bold; } /* Matches primary accent */
 .fail { color: #ff5f56; font-weight: bold; }
 
 /* ============== ICONS & ANIMATIONS ============== */
