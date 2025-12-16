@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - CainCyberLabs, LLC</title>
+    <link rel="stylesheet" href="style.css?v=1.3">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand" style="display: flex; align-items: center; gap: 10px;">
+    <img src="logo.png" alt="Logo" style="height: 30px; width: auto;">
+    CainCyberLabs
+</a>
+            <div class="nav-links">
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Get in Touch</h1>
+            <p>We're here to answer your questions about our products, support, or potential consulting engagements.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="content-panel fade-in-section" style="text-align: center;">
+            <h2><i data-feather="mail"></i> Contact Information</h2>
+            <p>For all inquiries, including sales, support, and partnerships, please reach out to us via email.</p>
+            
+            <p style="font-size: 1.5rem; margin-top: 2rem;">
+                <a href="mailto:contact@caincyberlabs.com">contact@caincyberlabs.com</a>
+            </p>
+
+            <p style="margin-top: 4rem;">You can also connect with our founder on LinkedIn:</p>
+            <a href="https://www.linkedin.com/in/christian-cain-c2573/" class="cta-button">Connect on LinkedIn</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 CainCyberLabs, LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+</html>

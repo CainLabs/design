@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - CainCyberLabs</title>
+    <link rel="stylesheet" href="style.css?v=2.4">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand" style="display: flex; align-items: center; gap: 10px;">
+    <img src="logo.png" alt="Logo" style="height: 30px; width: auto;">
+    CainCyberLabs
+</a>
+            <div class="nav-links">
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Simple, Transparent Pricing</h1>
+            <p>One license. All frameworks. Unlimited audits on licensed devices.</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+            
+            <section class="content-panel fade-in-section cta-panel" style="flex: 1; min-width: 300px; border: 1px solid #233554;">
+                <h3>Single Site License</h3>
+                <div class="price">$499 <span style="font-size: 1rem; color: #8892b0;">/ year</span></div>
+                <p>Perfect for small businesses or single-location audits.</p>
+                <hr style="border: 0; border-top: 1px solid #233554; margin: 1.5rem 0;">
+                <ul class="cta-list">
+                    <li><i data-feather="check"></i> <strong>Full Compliance Compass Tool</strong></li>
+                    <li><i data-feather="check"></i> PCI, CMMC, HIPAA Modules</li>
+                    <li><i data-feather="check"></i> File Activity Monitor</li>
+                    <li><i data-feather="check"></i> Email Support</li>
+                </ul>
+                <a href="contact.html" class="cta-button">Buy Now</a>
+            </section>
+
+            <section class="content-panel fade-in-section cta-panel" style="flex: 1; min-width: 300px; border: 2px solid #64ffda; transform: scale(1.05);">
+                <div style="background: #64ffda; color: #0a192f; font-weight: bold; padding: 0.25rem; border-radius: 4px; display: inline-block; margin-bottom: 1rem;">MOST POPULAR</div>
+                <h3>Consultant License</h3>
+                <div class="price">$1,499 <span style="font-size: 1rem; color: #8892b0;">/ year</span></div>
+                <p>Designed for MSPs and Security Consultants managing multiple clients.</p>
+                <hr style="border: 0; border-top: 1px solid #64ffda; margin: 1.5rem 0;">
+                <ul class="cta-list">
+                    <li><i data-feather="check"></i> <strong>Unlimited Clients</strong></li>
+                    <li><i data-feather="check"></i> White-Label Ready Reports</li>
+                    <li><i data-feather="check"></i> Priority Support</li>
+                    <li><i data-feather="check"></i> Early Access to New Features</li>
+                </ul>
+                <a href="contact.html" class="cta-button">Buy Consultant License</a>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 CainCyberLabs, LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+</html>

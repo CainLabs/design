@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - CainCyberLabs, LLC</title>
+    <link rel="stylesheet" href="style.css?v=1.3">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand" style="display: flex; align-items: center; gap: 10px;">
+    <img src="logo.png" alt="Logo" style="height: 30px; width: auto;">
+    CainCyberLabs
+</a>
+            <div class="nav-links">
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Forged in the Field. Built for Business.</h1>
+            <p>Our methodology is born from over a decade of experience securing the nation's most critical digital infrastructure.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="content-panel fade-in-section">
+            <h2><i data-feather="flag"></i> Our Story</h2>
+            <p>CainCyberLabs was founded on a simple principle: the discipline and rigor of military-grade cybersecurity shouldn't be reserved for large enterprises and government agencies. Every business, regardless of size, deserves access to expert-level tools that provide real, verifiable security.</p>
+            <p>Our founder is a U.S. Marine Corps veteran who transitioned into a career as a Cyber Systems Security Engineer. For over ten years, he worked on the front lines of national security, hardening critical DoD systems, achieving Authority to Operate (ATO) for new platforms, and mastering the complex compliance frameworks of STIGs and NIST 800-53.</p>
+            <p>This experience revealed a major gap in the market: small to mid-sized businesses were left to navigate the complex world of compliance with either inadequate tools or prohibitively expensive consultants. CainCyberLabs was created to bridge that gap by translating elite, real-world expertise into affordable, automated, and easy-to-use solutions.</p>
+        </section>
+
+        <section class="content-panel fade-in-section">
+            <h2><i data-feather="crosshair"></i> Our Mission</h2>
+            <p>Our mission is to empower overworked IT teams by providing them with tools that are simple, powerful, and built with an engineer's focus on what truly matters. We're not just selling software; we're selling confidence, clarity, and the peace of mind that comes from knowing your systems are built on a secure and compliant foundation.</p>
+            <a href="products.html" class="cta-button" style="margin-top: 1rem;">View Our Products</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 CainCyberLabs, LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+</html>

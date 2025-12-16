@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliance Compass by CainCyberLabs</title>
+    <link rel="stylesheet" href="style.css?v=2.5">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand" style="display: flex; align-items: center; gap: 10px;">
+    <img src="logo.png" alt="Logo" style="height: 30px; width: auto;">
+    CainCyberLabs
+</a>
+            <div class="nav-links">
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container" style="position: relative; z-index: 10;">
+            <h1>Automate Your Audit. Secure Your Network.</h1>
+            <p>Compliance Compass is the enterprise-grade auditor that verifies PCI DSS, CMMC, and HIPAA configurations in a single pass. Professional. Portable. Precise.</p>
+            
+            <div style="margin-top: 2rem;">
+                <a href="products.html" class="cta-button">View Pricing</a>
+                <a href="contact.html" class="cta-button outline" style="margin-left: 1rem;">Request Demo</a>
+            </div>
+
+            <div class="terminal-window fade-in-section">
+                <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span style="margin-left: 15px; color: #8892b0; font-size: 0.8rem;">Administrator: Compliance Compass</span>
+                </div>
+                <div class="terminal-body">
+                    <div><span class="cmd">PS C:\></span> .\ComplianceCompass.exe -Target Localhost -Scan All</div>
+                    <br>
+                    <div>[+] Starting Engine v2.3...</div>
+                    <div>[+] Detecting Role... <span class="highlight">Domain Controller</span></div>
+                    <div>----------------------------------------</div>
+                    <div>[PCI-DSS] Password Complexity... <span class="success">PASS</span></div>
+                    <div>[CMMC] Account Lockout Policy... <span class="success">PASS</span></div>
+                    <div>[HIPAA] File Access Audit....... <span class="fail">WARNING (Unauthorized User Detected)</span></div>
+                    <div>----------------------------------------</div>
+                    <div><span class="highlight">Audit Complete.</span> Report generated: Audit_Report.html</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="value-prop" class="content-panel fade-in-section">
+            <h2>Why Professionals Choose Compliance Compass</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem;">
+                <div style="flex: 1; min-width: 250px;">
+                    <h3><i data-feather="dollar-sign"></i> ROI in Minutes</h3>
+                    <p>Manual audits cost thousands in engineering hours. Our tool completes a full 3-framework audit in under 60 seconds.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px;">
+                    <h3><i data-feather="lock"></i> Zero-Trust Design</h3>
+                    <p>No installation. No cloud connections. No agents. The safest way to audit air-gapped or sensitive networks.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px;">
+                    <h3><i data-feather="file-text"></i> Client-Ready Reports</h3>
+                    <p>Generate professional HTML & CSV reports instantly. Perfect for MSPs, QSAs, and Internal Audit teams.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="content-panel fade-in-section">
+            <h2>Unified Compliance Engine</h2>
+            <p>Stop buying separate tools for every regulation. Our unified engine maps technical realities to regulatory requirements automatically.</p>
+            <ul style="margin-top: 1.5rem; list-style: none; padding: 0;">
+                <li><i data-feather="check" style="color: #64ffda; margin-right: 10px;"></i> <strong>PCI DSS v4.0:</strong> Firewall, TLS, Password Policy, Logging.</li>
+                <li><i data-feather="check" style="color: #64ffda; margin-right: 10px;"></i> <strong>CMMC Level 2:</strong> Access Control, System Integrity, Audit.</li>
+                <li><i data-feather="check" style="color: #64ffda; margin-right: 10px;"></i> <strong>HIPAA:</strong> File Access Monitoring, Audit Controls.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 CainCyberLabs, LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+</html>
